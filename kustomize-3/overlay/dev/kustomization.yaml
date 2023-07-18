@@ -9,6 +9,6 @@ commonLabels:
 
 namePrefix: dev-
 
-# patches:
-#   - strategy-patch.yaml
-#   - patch-service.yaml
+patches:
+  - strategy-patch.yaml
+  - patch-service.yaml
