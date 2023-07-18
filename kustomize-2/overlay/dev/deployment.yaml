@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: calender
+  labels:
+    exe: py
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: calender-app
+  template:
+    metadata:
+      labels:
+        app: calender-app
+    spec:
+      containers:
+        - name: dev-calender-container
+          image: kukuhsatrio/calender-app:latest

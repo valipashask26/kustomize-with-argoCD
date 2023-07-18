@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+  - ../../base
+ # - https://github.com/org/repo/dir/
+namePrefix: prod-
+
+commonLabels:
+  env: prod
+  user: sk
+
+namespace: sk-ws
+
+
+patches:
+  - replica-patch.yaml

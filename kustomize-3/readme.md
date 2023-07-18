@@ -1,0 +1,1 @@
+* kustomize with argo cd using app of apps argoCD trick
