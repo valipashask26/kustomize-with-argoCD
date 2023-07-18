@@ -1,9 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
-
 metadata:
   name: app-of-apps
-
 spec:
   project: default
   source:
@@ -13,10 +11,9 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: kust-test
-  
   syncPolicy:
-    syncOptions:
-      - CreateNamespace: true
     automated:
       prune: true
       selfHeal: true
+    syncOptions: 
+      - CreateNamespace=true
