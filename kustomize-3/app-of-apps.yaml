@@ -3,14 +3,13 @@ kind: Application
 
 metadata:
   name: app-of-apps
-  namespace: argocd
 
 spec:
   project: default
   source:
     repoURL: https://github.com/valipashask26/kustomize-with-argoCD.git
     targetRevision: master
-    path: /kustomize-3
+    path: kustomize-3
   destination:
     server: https://kubernetes.default.svc
     namespace: kust-test

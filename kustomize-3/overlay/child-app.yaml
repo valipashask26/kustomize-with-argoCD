@@ -6,11 +6,11 @@ metadata:
   namespace: argocd
 
 spec:
-  project: default
+  project: sk
   source:
     repoURL: https://github.com/valipashask26/kustomize-with-argoCD.git
     targetRevision: master
-    path: /kustomize-3/overlay/dev
+    path: kustomize-3/overlay/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: kust-test
